@@ -1,9 +1,9 @@
-package com.example.rest.controller;
+package com.example.demo.controller;
 
 import java.util.List;
 
-import com.example.rest.model.Employee;
-import com.example.rest.services.service;
+import com.example.demo.model.Employee;
+import com.example.demo.services.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

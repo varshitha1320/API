@@ -1,29 +1,31 @@
-package com.example.demo.Model;
+package com.example.demo.model;
 
 import jakarta.persistence.*;
+
 @Entity
-@Table(name="employee")
+@Table(name = "employee")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
     private String dept;
-    private  double salary;
-    public Employee(long id,String name ,String dept,double salary)
-    {
-        this.id=id;
-        this.name=name;
-        this.dept=dept;
-        this.salary=salary;
+    private double salary;
 
+    public Employee() {}
 
+    public Employee(Long id, String name, String dept, double salary) {
+        this.id = id;
+        this.name = name;
+        this.dept = dept;
+        this.salary = salary;
     }
+
     public Long getId() {
         return id;
-    } 
+    }
 
-    public void setId(Long id ) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -50,6 +52,4 @@ public class Employee {
     public void setSalary(double salary) {
         this.salary = salary;
     }
-
-    
 }

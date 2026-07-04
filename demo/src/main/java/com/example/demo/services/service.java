@@ -1,7 +1,7 @@
-package com.example.rest.services;
+package com.example.demo.services;
 
-import com.example.rest.model.Employee;
-import com.example.rest.repository.repository;
+import com.example.demo.model.Employee;
+import com.example.demo.repository.repository;
 
 import java.util.List;
 
@@ -26,16 +26,16 @@ public class service {
     public Employee updateEmployee(Long id,Employee emp){
         Employee employ=res.findById(id).orElse(null);
         if(employ!=null){
-            employ.setid(emp.getid());
-            employ.setname(emp.getname());
-            employ.setdept(emp.getdept());
-            employ.setsalary(emp.getsalary());
+            employ.setId(emp.getId());
+            employ.setName(emp.getName());
+            employ.setDept(emp.getDept());
+            employ.setSalary(emp.getSalary());
 
-            return res.save(emp);
+            return res.save(employ);
         }
         return null;
     }
     public void deleteEmployee(Long id){
-        res.deleteEmployee(id);
+        res.deleteById(id);
     }
 }

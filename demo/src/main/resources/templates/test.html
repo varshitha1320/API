@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        
+* {
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight:3px;
+  font-style: normal;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>From</h1>
+        <form th:action="@{/submit}" th:object="${userform}" method="post">
+            <label >Name:</label>
+            <input type="text" placeholder="pranay" th:field="*{name}" required><br><br>
+            <label >dept :</label>
+            <input type="text" placeholder="cse" th:field="*{cse}" required><br><br>
+            <label >salary :</label>
+            <input type="number" placeholder="1223344" th:field="*{salary}" required><br><br>
+
+            <button type="submit">submit</button><br><br>
+        </form>
+
+    </div>
+    
+</body>
+</html>
